@@ -1,2 +1,51 @@
 # Numerical-Analysis-Algorithms
-Implementations of various Algorithms used in Numerical Analysis, from root-finding up to gradient descent and numerically solving PDEs.
+Implementations of various algorithms used in Numerical Analysis, from root-finding up to gradient descent and numerically solving PDEs.
+
+Information:
+
+- **ab2.m**: Implementation of the 2-step Adams-Bashforth method for solving ODEs.
+  - Current configuration is for the ODE $y' = 1 + \sin(t)-y$, $y(2)=1$
+- **adamspc.m**: Implementation of an Adams 2nd order Predictor-Corrector Method, using the explicit 2-step Adams-Bashforth method and the implicit 2-step Adams-Moulton method
+  - Current configuration is for the ODE $y' = 1 + (t-y)^2$, $y(2) = 1$.
+- **aitken.m**: Implementation of Aitken's Delta-Squared Process for Series Acceleration.
+  - Current configuration is for the sequence $\left(p_n\right)$ given by $p_n = \sqrt{\frac{1}{3}e^{p_{n-1}}}$.
+- **bisection.m**: Implementation of Bisection method for finding roots
+  - Current configuration is for $f(x) = x + \cos(x)$ in the interval $[-5,5]$ with tolerance $10^{-10}$.
+- **broyden.m**: Implementation of Broyden's Method for finding solutions to nonlinear systems of equations.  
+  - Current configuration is for the system $\vec{F}(x,y) = (x^2 + y - 11, x + y^2 - 7)$
+- **euler.m**: Implementation of Euler's method for solving ODes
+  - Current configuration is for the ODE $y' = 1 + (t-y)^2$, $y(2) = 1$. Implementations on multiple step sizes are given.
+- **euler_system.m**: Implementation of Euler's Method for solving a system of ODEs.
+  - Current configuration is for the ODE $y'' = -\sin(y)$, $y(0) = -1$, $y'(0) = 0$.
+- **fdm.m**: Implementation of the Finite Difference method for solving BVPs of the form $y'' = p(x)y' + q(x)y + r(x)$ with $y\in [a,b]$, $y(a) = \alpha$, $y(b) = \beta$.
+  - Current configuration is for the system: $p(x) = 2$, $q(x) = -1$, $r(x) = xe^x - x$, with $a = 0$, $b = 2$, $y(a) = 0$, $y(b) = -4$.
+- **fdmlaplace.m**: Implementation of the Finite Difference Method for solving PDEs that satisfy Laplace's Equation $u_{xx} + u_{yy} = 0$
+  - Current configuration is for the boundary conditions $(x,y)\in [0,1]\times[0,1]$ given by $u(0,y) = \sin(2\pi y)$, $u(1,y) = u(x,0) = u(x,1) = 0$.
+- **fixed_point_gauss_seidel.m**: Fixed point iteration for a system of nonlinear equations but implemented with the Gauss-Seidel Method.
+  - Current configuration is for the system of equations $\vec{G}(x,y) = (\sqrt{1-y^2}, \sqrt{\frac{9-5x^2}{21}})$.
+- **fixed_point_system.m**: Fixed point iteration for a system of nonlinear equations.
+  - Current configuration is for the system of equations $\vec{G}(x,y) = (\sqrt{1-y^2}, \sqrt{\frac{9-5x^2}{21}})$.
+- **fixedptiteration.m**: Fixed point iteration method for finding roots
+  - Current configuration is for the functions: $g(x) = \pi + \frac{1}{2}\sin(\frac{x}{2})$, $g_1(x) = (-2x^2+x+3)^\frac{1}{4}$, $g_2(x) = \sqrt{\frac{1}{2}(-x^4+x+3)}$, $g_3(x) = \sqrt{\frac{x+3}{x^2+2}}$, and $g_4(x) = \frac{3x^4+2x^2+3}{4x^3+4x-1}$.
+- **leapfrog**: Implementation of the leapfrog method for solving ODEs
+  - Current configuration is for the ODE $y' = 1 + \sin(t)-y$, $y(2)=1$.
+- **lshooting.m**: Implementation of the Linear Shooting Method for solving BVPs of the form $y'' = p(x)y' + q(x)y + r(x)$ with $y\in [a,b]$, $y(a) = \alpha$, $y(b) = \beta$.
+  - Current configuration is for the system: $p(x) = 2$, $q(x) = -1$, $r(x) = xe^x - x$, with $a = 0$, $b = 2$, $y(a) = 0$, $y(b) = -4$.
+- **meuler.m**: Implementation of the Modified Euler's Method for solving ODEs
+  - Current configuration is for the ODE $y' = 1 + (t-y)^2$, $y(2) = 1$. Implementations on multiple step sizes are given.
+- **modnewton.m**: Implementation of a Modified Newton-Raphson method to avoid multiple roots. This is similar to Halley's Method, but instead of using $\frac{f(x)}{\sqrt{|f'(x)|}}$ like in Halley's method, instead using $\frac{f(x)}{f'(x)}$.
+  - Current configuration is on the equation $f(x) = e^x - 1 - x - \frac{x^2}{2}$. 
+- **newton.m**: Implementation of the Newton-Raphson method for finding roots.
+  - Current configuration is on the equation $f(x) = e^x - 1 - x - \frac{x^2}{2}$, with tolerance of $10^{-10}$ and initial guess of $p_0 = 1$.
+- **newtonsys.m**: Implementation of the Newton-Raphson method for a system of nonlinear equations.
+  - Current configuration is for the system $\vec{F}(x,y) = (x^2 + y - 11, x + y^2 - 7)$, with an initial guess of $(-0.164, 1)$.
+- **nlshooting.m**: Implementation of the Nonlinear Shooting Method for solving BVPs of the form $y'' = p(x)y' + q(x)y + r(x)$ with $y\in [a,b]$, $y(a) = \alpha$, $y(b) = \beta$.
+  - Current configuration is for the system: $p(x) = 2$, $q(x) = -1$, $r(x) = xe^x - x$, with $a = 0$, $b = 2$, $y(a) = 0$, $y(b) = -4$.
+- **rk4_system.m**: Implementation of the 4th order Runge-Kutta method for solving a system of ODEs.
+  - Current configuration is for the ODE $y'' = -y$, $y(0) = 1$, $y'(0) = 0$.
+- **secant.m**: Implementation of the Secant method for finding roots
+  - Current configuration is for the function $f(x) = -x^3-\cos(x)$ with tolerance $10^{-20}$ and a maximum of $100$ itreations with the initial guesses $p_0 =-1$, $p_1 = 0$. 
+- **spline.m**: Building splines with natural boundary conditions.
+  - Current configuration is for building a cubic spline for the points $(0.1, -0.62049958), (0.2,-0.28398668), (0.3, 0.00660095), (0.4,0.24842440)$.
+- **steepdesc.m**: Implementation of Steepest Gradient Descent for solving systems of nonlinear equations.
+  - Current configuration is for the system $\vec{F}(x,y) = (x^2 + y - 11, x + y^2 - 7)$, with an initial guess of $(-0.164, 1)$.
