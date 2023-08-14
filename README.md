@@ -44,7 +44,7 @@ Information:
 - **rk4_system.m**: Implementation of the 4th order Runge-Kutta method for solving a system of ODEs.
   - Current configuration is for the ODE $y'' = -y$, $y(0) = 1$, $y'(0) = 0$.
 - **secant.m**: Implementation of the Secant method for finding roots
-  - Current configuration is for the function $f(x) = -x^3-\cos(x)$ with tolerance $10^{-20}$ and a maximum of $100$ itreations with the initial guesses $p_0 =-1$, $p_1 = 0$. 
+  - Current configuration is for the function $f(x) = -x^3-\cos(x)$ with tolerance $10^{-20}$ and a maximum of $100$ iterations with the initial guesses $p_0 =-1$, $p_1 = 0$. 
 - **spline.m**: Building splines with natural boundary conditions.
   - Current configuration is for building a cubic spline for the points $(0.1, -0.62049958), (0.2,-0.28398668), (0.3, 0.00660095), (0.4,0.24842440)$.
 - **steepdesc.m**: Implementation of Steepest Gradient Descent for solving systems of nonlinear equations.
